@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-    init1
+    init
       <header className="App-header">
         init
         <img src={logo} className="App-logo" alt="logo" />
