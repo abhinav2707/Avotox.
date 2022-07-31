@@ -27,7 +27,7 @@ function App() {
        <input
               type="number"
               className="input"
-              placeholder="weight*"
+              placeholder="weight*(in meter)"
               name="weight"
               value={user.weight}
               onChange={handleInputs}
