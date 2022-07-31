@@ -15,13 +15,13 @@ function App() {
   const calculate = (e) => {
     e.preventDefault();
 
-    if (formData.height === 0) {
-      setError({ ...error, height: "height can't be zero" });
+    if (formData.height <= 0) {
+      setError({ ...error, height: "Invalid height" });
       return false;
     }
 
-    if (formData.weight === 0) {
-      setError({ ...error, weight: "weight can't be zero" });
+    if (formData.weight <= 0) {
+      setError({ ...error, weight: "Inavlid Weight" });
       return false;
     }
 
