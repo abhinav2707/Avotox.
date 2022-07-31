@@ -21,7 +21,7 @@ let weight=state.weight;
   if (!formValid) {
     return;
   }
-  const bmi = weight / (height) ** 2;
+  const bmi =weight / (height)^2;
   setState({...state,result:bmi})
 };
 
