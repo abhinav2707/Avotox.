@@ -33,7 +33,7 @@ function App() {
               onChange={handleInputs}
             ></input>
         <input
-              type="number"
+              type=""
               className="input"
               placeholder="height*"
               name="height"
@@ -41,6 +41,7 @@ function App() {
               onChange={handleInputs}
             ></input>
     </form>
+    <button>Submit</button>
     </div>
     
   );
