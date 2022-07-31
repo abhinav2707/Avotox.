@@ -4,7 +4,7 @@ import ResultDisplay from './components/ResultDisplay';
 function App() {
   return (
     <div className="App">
-      <ResultDisplay bmi={30}/>
+      <ResultDisplay bmi={28}/>
     </div>
   );
 }
