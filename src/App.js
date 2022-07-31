@@ -33,7 +33,7 @@ function App() {
               onChange={handleInputs}
             ></input>
         <input
-              type=""
+              type="number"
               className="input"
               placeholder="height*"
               name="height"
