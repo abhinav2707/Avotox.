@@ -3,8 +3,8 @@ import { Input, VStack, Button, Text } from "@chakra-ui/react";
 
 function App() {
   const [formData, setFormData] = useState({
-    height: 0,
-    weight: 0,
+    height: "",
+    weight: "",
   });
   const [error, setError] = useState({
     height: "",
