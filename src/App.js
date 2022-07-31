@@ -25,7 +25,7 @@ function App() {
     <h1>BMI Calculator</h1>
     <form>
        <input
-              type="text"
+              type="number"
               className="input"
               placeholder="weight*"
               name="weight"
@@ -33,7 +33,7 @@ function App() {
               onChange={handleInputs}
             ></input>
         <input
-              type="text"
+              type="number"
               className="input"
               placeholder="height*"
               name="height"
