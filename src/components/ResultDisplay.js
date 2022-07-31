@@ -27,7 +27,8 @@ const ResultDial = ({bmi}) => {
         setType('Obese');
       }
     }
-  }, [bmi])
+  }, 
+  [bmi])
 
   let displayVal = bmi===0?'none':'flex';
   return (
