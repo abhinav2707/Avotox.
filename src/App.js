@@ -19,13 +19,13 @@ function App() {
       setError({ ...error, height: "height can't be zero" });
       return false;
     }
-    setError({ ...error, height: "" });
 
     if (formData.weight === 0) {
       setError({ ...error, weight: "weight can't be zero" });
       return false;
     }
-    setError({ ...error, weight: "" });
+
+    setError({ height: "", weight: "" });
 
     const bmi = formData.weight / (formData.height * formData.height);
     SetResult(bmi);
