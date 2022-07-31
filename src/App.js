@@ -1,8 +1,10 @@
-import React,{useEffect, useState} from "react";
+
+import React,{ useState} from "react";
 function BMI(){
   const [state,setState]=useState({
     weight:"",
-    height:""
+    height:"",
+    result:""
   });
  const handleEvent=(event)=>{
   if(event){
@@ -11,28 +13,41 @@ function BMI(){
     
   }
  }
+ const calculateBMI = () => {
+let height=state.height;
+let weight=state.weight;
+  const formValid = height > 0 && weight > 0;
+
+  if (!formValid) {
+    return;
+  }
+  const bmi = weight / (height) ** 2;
+  setState({...state,result:bmi})
+};
 
   return(
     <div>
     <h1>BMI Calculator</h1>
     <form>
        <input
-              type="text"
+              type="number"
               className="input"
-              placeholder="weight*"
+              placeholder="weight* in kg"
               name="weight"
               value={state.weight}
               onChange={handleEvent}
             ></input>
         <input
-              type="text"
+              type="number"
               className="input"
-              placeholder="height*"
+              placeholder="height* in cm"
               name="height"
               value={state.height}
               onChange={handleEvent}
             ></input>
     </form>
+    <button type="submit" onClick={calculateBMI}>Calculate BMI</button>
+    <h3>{state.result}</h3>
     </div>
     
     
