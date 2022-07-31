@@ -1,0 +1,75 @@
+.displaybar {
+    /* border: 2px solid red; */
+    height: 1rem;
+    width: 500px;
+    display: flex;
+  
+    border-radius: 0.5rem;
+    position: relative;
+    margin-top: 1rem;
+  }
+  
+  @media only screen and (max-width: 360px) {
+    .displaybar {
+      width: 300px;
+    }
+  }
+  
+  .underweight {
+    border: 2px solid yellow;
+    /* flex: 1; */
+    background-color: yellow;
+    border-radius: 0.5rem 0 0 0.5rem;
+    width: 4.5%
+  }
+  
+  .healthy {
+    border: 2px solid green;
+    /* flex: 6.4; */
+    background-color: green;
+    width: 28.82%;
+  }
+  
+  .overweight {
+    border: 2px solid orange;
+    background-color: orange;
+    /* flex: 4.9; */
+    width: 22.07%;
+  }
+  
+  .obese {
+    border: 2px solid red;
+    /* flex: 9.9; */
+    background-color: red;
+    border-radius: 0 0.5rem 0.5rem 0;
+    width: 44.59%;
+  }
+  
+  .pointer {
+    /* height: 1rem; */
+    width: 0.25rem;
+    /* background-color: black; */
+    position: absolute;
+    /* left: 100%; */
+    top: -0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .head {
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    background-color: gray;
+  
+  }
+  
+  .tail {
+    height: 1.25rem;
+    width: 0.25rem;
+    background-color: gray;
+    /* position: absolute; */
+    /* left: 100%; */
+    /* display: flex; */
+  }

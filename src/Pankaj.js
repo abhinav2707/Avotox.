@@ -1,5 +1,6 @@
 
 import React,{ useState} from "react";
+import ResultDial from './ankan/resultDisp'
 function BMI(){
   const [state,setState]=useState({
     weight:"",
@@ -21,7 +22,7 @@ let weight=state.weight;
   if (!formValid) {
     return;
   }
-  const bmi =weight / (height)^2;
+  const bmi =weight / Math.pow(height,2);
   setState({...state,result:bmi})
 };
 
@@ -37,6 +38,7 @@ let weight=state.weight;
               value={state.weight}
               onChange={handleEvent}
             ></input>
+            <br/>
         <input
               type="number"
               className="input"
@@ -46,8 +48,9 @@ let weight=state.weight;
               onChange={handleEvent}
             ></input>
     </form>
-    <button type="submit" onClick={calculateBMI}>Calculate BMI</button>
-    <h3>{state.result}</h3>
+    <button type="submit" onClick={calculateBMI} >Calculate BMI</button>
+    <h3>You BMI is {state.result}</h3>
+    <ResultDial bmi={state.result}/>
     </div>
     
     
