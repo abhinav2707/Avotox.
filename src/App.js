@@ -1,25 +1,41 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
-
 function App() {
+  const [height, setHeight] = useState(0);
+  const [weight, setWeight] = useState(0);
+  const [bmi, setBmi] = useState(0);
+
+  const calculateBMI = (event) => {
+    event.preventDefault();
+    const formValid = height > 0 && weight > 0;
+
+    if (!formValid) {
+      console.error("Enter valid inputs");
+      return;
+    }
+    const bmi = weight / (height) ** 2;
+    setBmi(bmi.toFixed(3));
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+       <div className="App">
+      <form onSubmit={calculateBMI}>
+        <div>
+          <label>Height(meters)</label>
+          <input value={height} onChange={(e) => setHeight(e.target.value)} />
+        </div>
+
+        <div>
+          <label>Mass(kg)</label>
+          <input value={weight} onChange={(e) => setWeight(e.target.value)} />
+        </div>
+
+        <button type="submit">calculate</button>
+      </form>
+      <p>BMI: {bmi}</p>
     </div>
-  );
+    </>
+  )
 }
 
 export default App;
