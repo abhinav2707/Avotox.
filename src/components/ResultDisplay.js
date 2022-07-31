@@ -29,8 +29,9 @@ const ResultDial = ({bmi}) => {
     }
   })
 
+  let displayVal = bmi===0?'none':'flex';
   return (
-    <div>
+    <div className='display-container' style={{display: displayVal}}>
     <div className='bmi-value'>
       <h2 className='bmi'>
       BMI: {bmi}</h2>
